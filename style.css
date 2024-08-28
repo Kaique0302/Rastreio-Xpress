@@ -1,0 +1,453 @@
+/*======= ESTILIZAÇÃO DO SITE   ======*/
+
+@font-face {/*ESTÁ ABA É PARA A REQUISIÇÃO DAS FONTES*/
+    font-family: 'Helvetica Neue';
+    src: url('caminho/para/sua/fonte/HelveticaNeue-Bold.woff2') format('woff2'),
+         url('caminho/para/sua/fonte/HelveticaNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+body{
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding:0;
+}
+/*Este root serve para conseguir puxar as cores de maneira mais facil e de conseguir alterar também de maneira melhor*/
+:root {
+    /*VARIAVEL DE CORES*/
+    --cor-verde-escuro: #1A9047;
+    --cor-verde-claro: #2BC866;
+    --cor-azul-escuro: #004AAD;
+    --background-color: #ffffff;
+    
+}
+
+/*Menu do site*/
+.menu-nav {
+    color: var(--cor-azul-escuro);/*Cor das letras do menu*/
+    background-color: white;/*fundo do menu*/
+    display: flex; /*o display flex para o alinhamento ao centro*/
+    justify-content: space-between; /*para ocupar todo o espaço live se necessário*/
+    align-items: center;/*Para alinhar todos os itens ao centro*/
+    padding: 0.1rem 1.0rem; /*para definir a borda e o conteudo um entre o outro*/
+    box-shadow:  0  0.1rem  0.1rem rgba(0, 0, 0, 0.1);   /*borda com sombra */
+    position: fixed; /*para o menu não sumir após descer a pagina*/
+    z-index: 1000; /*para ele sobrepor qualquer item que esteja acima dele*/
+    width: 100% ; /*pegar 100 do tamanho*/
+    top: 0; /*tirar todo o espaço do topo do menu*/
+    left:50%; /*posicionar para a esquerda 50%*/
+    transform: translateX(-50%); 
+    max-width: 135rem; /*definindo o max do tamanho */
+    font-weight: bold;
+    
+   
+}
+
+
+
+
+.img-menu{
+    height: 4rem;  /*altura do menu */ 
+    margin-right: 0.3rem; /*definindo o quanto ocupar de margin right*/
+  }
+ 
+
+  .logo-container {
+    display: flex; /*para posicionar o menu */
+    align-items: center; /*alinhamento do texto no centro*/
+  }
+
+.logo{
+    display: flex;/*definindo o tipo de display*/
+    font-family: 'Helvetica Neue Bold', sans-serif; /* Fonte do texto */
+    color:var(--cor-azul-escuro); /* Cor do texto */
+    font-size: 1.3rem; /* Tamanho da fonte do texto */
+}
+
+.nav-itens a {
+    color: inherit; /*necessário para retirar sublinhado*/
+    text-decoration: none;/*tirando o qualquer tipo de decoração padrão do google*/
+}
+.nav-itens{
+    font-size: 20px;/*Tamanho da fonte*/
+    list-style: none; /*tirando bolinhas*/
+    display: flex;
+    gap: 1rem; /*definindo espaçamento do elemento */
+}
+
+.nav-itens li {
+    color: inherit; /*tirando decoração*/
+    text-decoration: none; /*tirando decoração*/ 
+    display: inline; /*display inline para conseguir deixar as listas organizadas*/
+}
+
+.nav-buttons {
+    display: flex; /*organização*/
+    gap: 1rem; /*espaçamento*/
+    
+}
+
+
+
+.nav-buttons .entrar {
+    cursor: pointer; /*necessário para mudar o cursos do botão*/
+    padding: 0.5rem 0.5rem; /*tamanho and largura do elemento*/
+    height: 35px; /*altura do elemento*/
+    width: 60px; /*tamanho do elemento*/
+    color: var(--cor-verde-claro); /*puxando a cor com o 'var', variavel criada */
+    background-color: white;
+    border-radius: 0.7rem;
+    border: 0.1rem solid var(--cor-verde-escuro);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Adiciona uma transição suave para as propriedades */
+}
+
+
+
+.nav-buttons .entrar:hover {
+    background-color: var(--cor-verde-claro); /* Altera a cor de fundo no hover */
+    color: white; /* Altera a cor do texto no hover */
+    border-color: var(--cor-verde-claro); /* Altera a cor da borda no hover */
+}
+
+.nav-buttons .cadastrar{
+    font-family:'Helvetica Neue' Bold , Helvetica; /*Fonte */
+    font-weight: bold; /*definindo o peso da fonte*/
+    cursor: pointer; /*O tipo de cursor*/
+    padding: 10rem , 2rem; /*largura do elemento*/
+    width: 130px; /*Tamanho do elemento*/
+    background-color: var(--cor-verde-escuro); /*Definindo o fundo do botão*/
+    color: white; /*Cor do elemento*/
+    border-radius: 0.7rem; /*Borda do elemento*/
+    border: 0.1rem solid var(--cor-verde-escuro); /*defindindo cor e solidez*/
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Adiciona uma transição suave */
+
+    
+}
+.nav-buttons .cadastrar:hover {
+    background-color: var(--cor-verde-claro); /* Altera a cor de fundo no hover */
+    color: white; /* Altera a cor do texto no hover */
+    border-color: var(--cor-verde-claro); /* Altera a cor da borda no hover */
+}
+.rastreio {
+  
+    text-align: center; /*faz o texto alinhar ao meio*/ 
+    margin: 2rem; /*define a marg*/
+
+}
+.rastreio h1 {
+    margin-top: 130px; /*colocando o elemento ao topo*/
+    color: var(--cor-verde-claro); /*definição de cores*/
+    font-size: 3rem; /*tamanho do texto*/
+}
+
+.rastreamento-input {
+    display: flex; /**/
+    justify-content: center;/*alinha os itens ao meio*/
+    align-items: center; /**/
+    gap: 10px; /**/
+}
+.input-bar {
+    height: 30px; /*altura*/
+width: 400px; /*tamanho*/
+}
+
+.button-rastrear {
+    display: flex;
+    background-color: rgb(80, 78, 88); /*fundo do elemento*/
+    color: white; /*cor do elemento*/
+    padding: 0.6rem 2rem; /*espaçamento*/
+    cursor: pointer; /*tipo de cursor*/
+    border: none; /*tirando a borda do elemento*/
+    border-radius: 0.2rem; /*retirando a borda*/
+    font-weight: bold; /*definindo o peso do texto*/
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+
+
+}
+.button-rastrear:hover{
+    transform: translateY(-5px); /* animação do botão */
+}
+
+
+.imagem-meio{
+
+    display: flex; /*Tipo de display*/
+    align-items: center; /*Alinhando o texto ao meio*/
+    justify-content: center; /*alinhando o texto ao centro*/
+    margin-top: 7rem; /*Este comando faz o elemento descer para baixo*/
+
+}
+
+.icone{
+    color: white;
+    margin-right: 8px; /*Este comando faz o elemento ir para a direita*/
+    width: 16px;  /*tamanho*/
+    height: 16px; /*altura*/
+    
+   
+}
+
+.container {
+    
+    padding: 6rem 2rem 3rem; /*Largura*/
+  
+    text-align: center; /*alinha ao meio*/
+    
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
+.container h1{
+    font-family: 'Helvetica Neue', sans-serif; /*Fonte do texto*/
+
+    font-size: 2.5rem; /*Tamanho da letra   */
+    font-weight: bold; /*peso da fonte*/
+    color: var(--cor-verde-claro); /*cor*/
+} 
+
+.container p{
+    
+    margin-top: 2rem; /*este comando faz o elemento descer*/
+    color:  #333333; /*este comando define cor*/
+}
+
+.itens{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+
+    
+}
+.feature-iten{
+    max-width: 250px; /*este elemento define o maximo de tamanho*/
+}   
+
+
+.feature-iten h2{
+    font-size: 1rem;
+    color: var(--cor-verde-claro);
+    margin-bottom: 2rem; /*este comando cria um espaço a baixo do elemento*/
+ 
+
+}
+
+.feature-iten p{
+    font-family: 'Helvetica Neue'; /*tipo de fonte*/
+    color:  #333333; /*tipo de cor */
+    font-size: 0.8rem; /*tamanho da fonte*/
+}
+
+.container-2 {
+    padding: 3rem 2rem; /*largura do elemento*/
+    color: var(--cor-verde-claro);
+    text-align: center; /*este comando faz o elemento ficar ao meio*/
+}
+.container-2 h2{
+    font-weight: bold; /*peso da fonte*/
+}
+
+.button-cadastre-agr{
+    background-color: var(--cor-verde-claro);
+    cursor: pointer;
+    color: white;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease; /* Transição suave para a transformação */
+}
+.button-cadastre-agr:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+
+}
+
+/* Responsividade */
+@media (max-width: 76.8rem) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        margin-bottom: 2rem;
+    }
+}
+
+.container-parceiros{
+    
+    text-align: center;
+    background-color: var(--cor-verde-claro);
+    color: white;
+    overflow: hidden; /* Garante que o conteúdo ao redor da imagem seja ajustado */
+    width: 100%;
+    margin-top: 100px;
+    padding: 5rem 4rem;
+    box-sizing: border-box; /* Inclui o padding e border no total width/height */
+
+
+}
+
+.container-parceiros h1{
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.3; /* Ajusta o espaçamento entre linhas */
+    margin-top:0;
+    font-size: 2rem;
+ 
+}
+
+.container-parceiros p {
+    font-size: 1rem;
+    margin: 0.5rem 0; /* Espaçamento vertical entre os parágrafos */
+    line-height: 1.5; /* Melhora a legibilidade do texto */
+    max-width: 800px; /* Limita a largura dos parágrafos para melhorar a legibilidade */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+.container-parceiros::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-image {
+    float: right; /* Faz a imagem flutuar à direita */
+    margin-left: 1rem; /* Espaço entre a imagem e o texto */
+    margin-top: 1rem; /* Espaço acima da imagem */
+    width: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+
+.patrocinadores {
+    display: flex;
+    background-color: white;    
+    border-radius: 30px; /* Bordas arredondadas */
+    padding:  0.2rem 4rem; /* Ajuste o espaçamento interno conforme necessário */
+    width: fit-content; /* Ajusta a largura do contêiner ao conteúdo */
+    max-width: 80%; /* Limita a largura máxima um pouco mais ampla */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    box-sizing: border-box; /* Inclui a borda e o padding no cálculo da largura */
+    justify-content: start; /* Alinha as imagens à esquerda do contêiner */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.patrocinadores img{
+    max-width: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin: 0.1rem 1.5rem; /* Espaçamento entre as imagens */
+}
+.container-parceiros h1 span.highlight {
+    display: block; /* Faz com que o texto fique em uma nova linha */
+    font-size: 2rem; /* Mesma fonte para manter oa alinhamento */
+    margin-top: 0.2rem; /* Ajuste para garantir o alinhamento visual */
+}
+
+
+.container-ajuda {
+    display: flex; /* Usa flexbox para o layout */
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: left; /* Alinha o texto à esquerda dentro do contêiner de texto */
+    gap: 1rem; /* Espaçamento entre a imagem e o conteúdo de texto */
+    padding: 6rem; /* Espaçamento interno para o contêiner */
+}
+
+.container-ajuda img {
+    display: block; /* Remove espaços indesejados ao redor da imagem */
+    width: 400px; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 200px;
+    
+}
+
+.text-content {
+   
+    max-width: 60%; /* Limita a largura do texto para não ocupar muito espaço */
+}
+
+.text-content h1 {
+    color: var(--cor-verde-claro);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    margin: 0; /* Remove margens adicionais */
+}
+
+.text-content p {
+    color: gray;
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+
+}
+.help-header h2 {
+    color: #35b779;
+    font-size: 24px;
+  }
+  
+  .help-header p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .help-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .help-card {
+    border: 2px solid #35b779;
+    padding: 70px 10px;
+    
+
+    border-radius: 8px;
+    width: 250px;
+    text-align: left;
+  }
+  
+  .help-card h3 {
+    color: #35b779;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .help-card p {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .help-card ul {
+    padding-left: 20px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .help-card .icon img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  .nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .nav-button img {
+    width: 24px; /* Ajuste o tamanho conforme necessário */
+    height: 24px;
+  }
+  
+  .card {
+    /* Estilos do card */
+    padding: 20px;
+    border: 1px solid green;
+    border-radius: 8px;
+  }
+
+
+  /*FIM */
